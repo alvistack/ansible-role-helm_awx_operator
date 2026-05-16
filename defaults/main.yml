@@ -47,6 +47,34 @@ helm_awx_operator_helm_release_values:
         chown 26:0 /var/lib/pgsql/data
         chmod 700 /var/lib/pgsql/data
       projects_persistence: true
+      task_resource_requirements:
+        requests:
+          cpu: 50m
+          memory: 64Mi
+      web_resource_requirements:
+        requests:
+          cpu: 50m
+          memory: 64Mi
+      ee_resource_requirements:
+        requests:
+          cpu: 50m
+          memory: 32Mi
+      redis_resource_requirements:
+        requests:
+          cpu: 10m
+          memory: 32Mi
+      postgres_resource_requirements:
+        requests:
+          cpu: 10m
+          memory: 32Mi
+      rsyslog_resource_requirements:
+        requests:
+          cpu: 50m
+          memory: 64Mi
+      init_container_resource_requirements:
+        requests:
+          cpu: 50m
+          memory: 64Mi
     postgres:
       enabled: false
   rbac:
