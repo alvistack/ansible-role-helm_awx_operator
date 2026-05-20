@@ -31,8 +31,6 @@ helm_awx_operator_helm_release_values:
       ingress_type: ingress
       ingress_hosts:
         - hostname: "{{ inventory_hostname }}"
-      ingress_path_type: Prefix
-      ingress_path: /awx
       image: quay.io/ansible/awx
       image_version: 24.6.1
       image_pull_policy: IfNotPresent
