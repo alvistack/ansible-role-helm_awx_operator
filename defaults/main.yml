@@ -36,7 +36,7 @@ helm_awx_operator_helm_release_values:
       image: quay.io/ansible/awx
       image_version: 24.6.1
       image_pull_policy: IfNotPresent
-      redis_image: docker.io/redis
+      redis_image: docker.io/library/redis
       redis_image_version: 8.6.3
       control_plane_ee_image: quay.io/ansible/awx-ee:24.6.1
       init_container_image: quay.io/ansible/awx-ee
