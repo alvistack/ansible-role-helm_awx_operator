@@ -93,7 +93,6 @@
     chart_ref: /etc/kubernetes/charts/awx-operator
     values_files: /etc/kubernetes/charts/awx-operator.values.yaml
     create_namespace: true
-    server_side: fales
     state: present
     wait: true
   when: inventory_hostname == groups['kube_master'][0]
